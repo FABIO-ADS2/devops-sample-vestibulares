@@ -1,22 +1,11 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+"""
+Definition of models.
+"""
 
-from django.db import models, migrations
+from django.db import models
 
-
-class Migration(migrations.Migration):
-
-    dependencies = [
-    ]
-
-    operations = [
-        migrations.CreateModel(
-            name='Curso',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('nome', models.CharField(max_length=200)),
-                ('periodo', models.CharField(max_length=50)),
-                ('instituicao', models.CharField(max_length=200)),
-            ],
-        ),
-    ]
+# Create your models here.
+class Curso(models.Model):
+    nome = models.CharField(max_length=200)
+    periodo = models.CharField(max_length=50)
+    instituicao = models.CharField(max_length=200)
